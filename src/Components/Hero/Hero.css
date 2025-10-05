@@ -1,0 +1,119 @@
+#hero{
+    height: 100vh;
+    width: 100vw;
+    max-width: 75rem;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.profile_img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.heroContent{
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.hi{
+    font-size: 1.75rem;
+    font-weight: 100;
+}
+
+.heroText{
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.heroName{
+    background: linear-gradient(267deg, #da257a 0.36%, #cec5d0 102.06%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.heroPara{
+    font-size: 1rem;
+    font-weight: 100;
+    line-height: 1.5rem;
+}
+
+.hero-action{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 1.5rem;
+}
+
+.hero-connect, .hero-resume{
+    padding: 15px 35px;
+    border-radius: 50px;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.hero-connect{
+    background: linear-gradient(267deg, #da257a 0.36%, #cec5d0 102.06%);
+    color: white;
+}
+
+.hero-connect:hover{
+    border: 2px solid white;
+}
+
+.hero-resume{
+    border: 2px solid white;
+    color: white;
+}
+
+.hero-resume:hover{
+    border-color: #B415FF;
+}
+
+@media(max-width: 840px){
+    #hero{
+        padding: 1rem;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .heroText{
+        font-size: 2rem;
+    }
+    .heroPara{
+        font-size: 0.9rem;
+        line-height: 1.3rem;
+    }
+    .hero-action{
+        flex-direction: column;
+        gap: 15px;
+    }
+    .hero-connect, .hero-resume{
+        padding: 12px 25px;
+        width: 80%;
+        text-align: center;
+    }
+    .profile_img{
+        position: absolute;
+        top: 0;
+        right: -10vw;
+        height: 100%;
+        opacity: 0.15; /* subtle background on mobile */
+    }
+}
